@@ -92,6 +92,10 @@ sig   = 16436
 ; Linux
 ; -----
 
+label = s:unix:Linux:Generic
+sig   = 4:52+12:0:1412:mss*44,7:mss,sok,ts,nop,ws:df,id+:0
+
+
 label = s:unix:Linux:3.11 and newer
 sig   = *:64:0:*:mss*20,10:mss,sok,ts,nop,ws:df,id+:0
 sig   = *:64:0:*:mss*20,7:mss,sok,ts,nop,ws:df,id+:0
@@ -356,6 +360,9 @@ sig   = *:64:0:1460:mss*4,2:mss,sok,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,
 ; The variation here is due to ws, sok, or ts being adaptively removed if the
 ; client initiating the connection doesn't support them. Use tools/p0f-sendsyn
 ; to get a full set of up to 8 signatures.
+
+label = s:unix:Linux:Generic
+sig = 4:64+0:0:1460:mss*45,7:mss,sok,ts,nop,ws:df:0
 
 
 label = s:unix:Linux:3.x
