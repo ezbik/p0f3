@@ -196,6 +196,15 @@ label = s:win:Windows:7 (Websense crawler)
 sig   = *:64:0:1380:mss*4,6:mss,nop,nop,ts,nop,ws:df,id+:0
 sig   = *:64:0:1380:mss*4,7:mss,nop,nop,ts,nop,ws:df,id+:0
 
+; v6 signatures
+
+label = s:win:Windows:11 pro
+sig = 6:255:0:*:65535,8:mss,nop,ws,nop,nop,sok:flow:0
+
+label = s:win:Windows:10 pro
+sig = 6:64:0:*:mss*45,8:mss,nop,ws,nop,nop,sok:flow:0
+
+
 ; Catch-all:
 
 label = g:win:Windows:NT kernel 5.x
@@ -225,6 +234,14 @@ sig   = *:64:0:*:65535,4:mss,nop,ws,nop,nop,ts,sok,eol+1:df,id+:0
 
 label = s:unix:iOS:iPhone or iPad
 sig   = *:64:0:*:65535,2:mss,nop,ws,nop,nop,ts,sok,eol+1:df,id+:0
+
+; v6 sigs 
+
+label = s:unix:iOS:iPhone 12 Pro Max
+sig = 6:255:0:*:65535,6:mss,nop,ws,nop,nop,ts,sok,eol+1:ecn,flow:0
+
+label = s:unix:iOS:iPhone 16 pro max
+sig = 6:64:0:*:65535,6:mss,nop,ws,nop,nop,ts,sok,eol+1:flow:0
 
 ; Catch-all rules:
 
