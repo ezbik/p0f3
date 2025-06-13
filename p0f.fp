@@ -235,6 +235,9 @@ sig   = *:64:0:*:65535,4:mss,nop,ws,nop,nop,ts,sok,eol+1:df,id+:0
 label = s:unix:iOS:iPhone or iPad
 sig   = *:64:0:*:65535,2:mss,nop,ws,nop,nop,ts,sok,eol+1:df,id+:0
 
+label = s:unix:iOS:iPhone 13
+sig   = *:64:0:*:65535,12:mss,nop,ws,sok,ts:df:0
+
 ; v6 sigs 
 
 label = s:unix:iOS:iPhone 12 Pro Max
