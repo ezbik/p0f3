@@ -221,6 +221,9 @@ label = g:win:Windows:NT kernel
 sig   = *:128:0:*:*,*:mss,nop,nop,sok:df,id+:0
 sig   = *:128:0:*:*,*:mss,nop,ws,nop,nop,sok:df,id+:0
 
+label = g:win:Windows:NT kernel IPv6
+sig   = *:128:0:*:*,*:mss,nop,ws,nop,nop,sok:flow:0
+
 ; ------
 ; Mac OS
 ; ------
